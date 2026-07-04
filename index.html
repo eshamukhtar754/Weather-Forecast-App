@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Search city...">
+                <button id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="weather-info" id="weatherInfo">
+                <div class="location">
+                    <h2 id="cityName">--</h2>
+                    <p id="dateTime">--</p>
+                </div>
+
+                <div class="temperature">
+                    <div class="temp-icon">
+                        <i id="weatherIcon" class="fas fa-cloud"></i>
+                    </div>
+                    <h1 id="temperature">--°C</h1>
+                    <p id="description">--</p>
+                </div>
+
+                <div class="details">
+                    <div class="detail-item">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <p>Humidity</p>
+                            <span id="humidity">--%</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p>Wind Speed</p>
+                            <span id="windSpeed">-- km/h</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-eye"></i>
+                        <div>
+                            <p>Visibility</p>
+                            <span id="visibility">-- km</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <div>
+                            <p>Pressure</p>
+                            <span id="pressure">-- hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast" id="forecast">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-cards" id="forecastCards">
+                    <!-- Forecast cards will be inserted here -->
+                </div>
+            </div>
+
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading weather data...</p>
+            </div>
+
+            <div class="error" id="error">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p id="errorMessage">City not found. Please try again.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
